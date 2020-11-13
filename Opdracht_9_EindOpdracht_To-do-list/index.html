@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do-list | Eindopdracht</title>
+    <script src="api-client.js"></script>
+    <script
+      src="https://kit.fontawesome.com/49b8217457.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Homemade+Apple&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="copy_paste_logo.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div id="load-page">
+      <i id="spinner" class="fa fa-spinner fa-spin fa-2x"></i>
+    </div>
+
+    <div class="container">
+      <h1></h1>
+
+      <div class="input-form">
+        <input
+          id="input-field"
+          type="text"
+          minlength="5"
+          maxlength="50"
+          required
+        />
+        <button id="add-task-btn" type="button">Add Task</button>
+      </div>
+    </div>
+
+    <div class="task-container">
+      <ul id="task-list" class="task-list"></ul>
+    </div>
+
+    <button class="remove-btn" id="remove-all-btn" type="button">
+      Remove All
+    </button>
+
+    <footer>
+      <a href="https://thenounproject.com/search/?q=trash&i=3595480">Trash</a>
+      <span>by</span>
+      <span
+        ><a href="https://thenounproject.com/emwaiem18/">M Yudi Maulana</a>
+      </span>
+      <span>from</span>
+      <span><a href="https://thenounproject.com/">the Noun Project</a></span>
+    </footer>
+  </body>
+</html>

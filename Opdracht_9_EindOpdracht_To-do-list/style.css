@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  color: #222222;
+  box-sizing: border-box;
+  font-family: "Amatic SC", cursive;
+}
+/* font-family: 'Homemade Apple', cursive; */
+
+button {
+  padding: 10px 30px;
+  background-color: #cabdb4;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-image: url("./Notebloc_pexels-karolina-grabowska-4226805.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0% 20%;
+}
+
+h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 4rem;
+  color: #222222;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-list {
+  margin: auto;
+  text-align: center;
+  width: auto;
+  height: auto;
+  font-size: 2rem;
+  font-family: "Homemade Apple", cursive;
+}
+ul > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div > img {
+  height: 40px;
+}
+div > img:hover {
+  cursor: pointer;
+}
+
+.input-form {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  align-items: center;
+}
+#input-field {
+  font-family: "Homemade Apple", cursive;
+  height: 45px;
+  font-size: 1.5rem;
+  padding: 15px;
+  background-color: #eaebee71;
+  outline: 3px dashed #cabdb4;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.task-container {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  width: 600px;
+  height: 600px;
+  font-family: "Homemade Apple", cursive;
+  overflow: auto;
+}
+
+.remove-btn {
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer {
+  position: fixed;
+  right: 1%;
+  top: 1%;
+}
+
+ul > div > li {
+  font-family: "Homemade Apple", cursive;
+  color: #134972;
+  font-size: 1.4rem;
+  border-bottom: dashed 2px #41403e;
+  border-radius: 3px;
+  border-color: #535455;
+}
+
+ul > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox {
+  width: 50px;
+}
+
+.task-done {
+  text-decoration: line-through;
+}
+
+
+#add-task-btn{
+  margin-top: 40px;
+}
+
+
+
+#spinner{
+  
+  position: absolute;
+  top: 50%;
+  left: 47.8%;
+  color: rgba(65, 61, 61, 0);
+  opacity: 0;
+}
+
