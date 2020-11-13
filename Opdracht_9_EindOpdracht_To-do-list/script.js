@@ -37,6 +37,7 @@ const setData = async () => {
 
         let newDiv = document.createElement("div")
         let newLi = document.createElement("li");
+        newLi.setAttribute("contenteditable", "true")
         let deleteLi = document.createElement("img")
         let checkbox = document.createElement("input")
         checkbox.setAttribute("type", "checkbox")
@@ -52,7 +53,7 @@ const setData = async () => {
             if (task.done == true) {
                 await updateData(task._id, task.description, false)
                 await setData()
-            } else if (task.done == false) {
+            } if (task.done == false) {
                 await updateData(task._id, task.description, true)
                 await setData()
             }
@@ -98,6 +99,35 @@ taskUl.addEventListener("click", async (e) => {
         await setData()
     }
 })
+
+// =====edits task on click======
+/* zal vast wel korter kunnen, maar dit was het beste wat ik kon verzinnen 
+met werken met "contenteditable" class */
+
+taskUl.addEventListener("click", async (e) => {
+
+    let postID = e.target.parentNode.children[2].id
+    let taskDone = e.target.parentNode.children[1].className
+    if (e.target.tagName === "LI") {
+        e.target.addEventListener("keydown", async (event) => {
+
+            if (event.code === "Enter" && taskDone === "task-done") {
+                let task = event.path[0].innerHTML;
+                await updateData(postID, task, true)
+                await setData()
+            }
+
+            if (event.code === "Enter" && taskDone === "") {
+                let task = event.path[0].innerHTML;
+                await updateData(postID, task, false)
+                await setData()
+            }
+        })
+
+    }
+})
+
+// =====edits task on click======
 
 
 
