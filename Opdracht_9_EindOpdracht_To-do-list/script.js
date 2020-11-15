@@ -104,7 +104,7 @@ taskUl.addEventListener("click", async (e) => {
 /* zal vast wel korter kunnen, maar dit was het beste wat ik kon verzinnen 
 met werken met "contenteditable" class */
 
-taskUl.addEventListener("click", async (e) => {
+/* taskUl.addEventListener("click", async (e) => {
 
     let postID = e.target.parentNode.children[2].id
     let taskDone = e.target.parentNode.children[1].className
@@ -125,7 +125,7 @@ taskUl.addEventListener("click", async (e) => {
         })
 
     }
-})
+}) */
 
 // =====edits task on click======
 
