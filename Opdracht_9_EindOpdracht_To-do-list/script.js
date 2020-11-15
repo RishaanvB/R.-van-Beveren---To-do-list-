@@ -30,8 +30,8 @@ let hideSpinner = () => {
 
 
 const setData = async () => {
-    const taskData = await getData();
     taskUl.querySelectorAll("*").forEach((task) => task.remove());
+    const taskData = await getData();
 
     taskData.forEach(task => {
 
@@ -44,7 +44,7 @@ const setData = async () => {
         deleteLi.setAttribute("src", "noun_Trash_3595480.png")
         deleteLi.setAttribute("class", "trash-icon")
         deleteLi.setAttribute("id", task._id)
-        taskUl.prepend(newDiv)
+        taskUl.append(newDiv)
         newDiv.append(checkbox, newLi, deleteLi)
         newLi.innerHTML = task.description;
 
