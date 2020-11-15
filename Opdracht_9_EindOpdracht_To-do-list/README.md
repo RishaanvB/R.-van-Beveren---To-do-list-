@@ -1,3 +1,4 @@
-####PAS OP! 
+####Let OP! 
 
-#aub niet de click on enter code veranderen die uit gecomment is. Zorgt voor een 429 error
+
+Zat een fout tussen die voor een 429 error zorgde. Ben hem nu aan het fixen
