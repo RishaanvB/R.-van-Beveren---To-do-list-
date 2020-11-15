@@ -30,8 +30,8 @@ let hideSpinner = () => {
 
 
 const setData = async () => {
-    taskUl.querySelectorAll("*").forEach((task) => task.remove());
     const taskData = await getData();
+    taskUl.querySelectorAll("*").forEach((task) => task.remove());
 
     taskData.forEach(task => {
 
@@ -104,7 +104,7 @@ taskUl.addEventListener("click", async (e) => {
 /* zal vast wel korter kunnen, maar dit was het beste wat ik kon verzinnen 
 met werken met "contenteditable" class */
 
-/* taskUl.addEventListener("click", async (e) => {
+taskUl.addEventListener("click", async (e) => {
 
     let postID = e.target.parentNode.children[2].id
     let taskDone = e.target.parentNode.children[1].className
@@ -117,7 +117,7 @@ met werken met "contenteditable" class */
                 await setData()
             }
 
-            if (event.code === "Enter" && taskDone === "") {
+            else if(event.code === "Enter" && taskDone === "") {
                 let task = event.path[0].innerHTML;
                 await updateData(postID, task, false)
                 await setData()
@@ -125,7 +125,7 @@ met werken met "contenteditable" class */
         })
 
     }
-}) */
+})
 
 // =====edits task on click======
 
